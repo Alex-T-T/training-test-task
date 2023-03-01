@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import logo from './images/logo/logo.svg';
+import userLogo from './images/logo/Hansel.png' 
 import './App.css';
 
+// const users = 
+
 function App() {
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='card'>
+          <img className='logo' src={logo} alt="logo" width={76} />
+        <img className='user-logo' src={userLogo} alt="user logo" width={62} height={62} />
+        <div className='content'>
+          <p className='user-properties'>userName</p>
+          <p className='user-properties'>Tweets</p>
+          <p className='user-properties'>Followers</p> 
+        </div>
+        <button className='btn' type='button'>Follow</button>
+      </div>
     </div>
   );
 }
