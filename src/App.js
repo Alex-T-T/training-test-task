@@ -1,26 +1,51 @@
-import logo from './images/logo/logo.svg';
+// import logo from './images/logo/logo.svg';
 import userLogo from './images/logo/Hansel.png' 
 import './App.css';
+import { CardList } from './components/CardList/CardList';
 
-// const users = 
+const users = [
+        {
+            "id": 1,
+            "user": "Elon Reeve Musk",
+            "tweets": 777,
+            "followers": 100500,
+            "avatar": userLogo,
+        },
+        {
+            "id": 2,
+            "user": "Tim Cook",
+            "tweets": 888,
+            "followers": 1000000,
+            "avatar": userLogo,
+        },
+        {
+            "id": 3,
+            "user": "SomeBody",
+            "tweets": 99,
+            "followers": 47,
+            "avatar": userLogo
+        },
+        {
+            "id": 4,
+            "user": "Boris Jonsonyk",
+            "tweets": 999,
+            "followers": 10100500,
+            "avatar": userLogo
+        },
+        {
+            "id": 5,
+            "user": "Good Girl",
+            "tweets": 100,
+            "followers": 100,
+            "avatar": userLogo
+        }
+    ]
 
 function App() {
 
 
-
   return (
-    <div className="App">
-      <div className='card'>
-          <img className='logo' src={logo} alt="logo" width={76} />
-        <img className='user-logo' src={userLogo} alt="user logo" width={62} height={62} />
-        <div className='content'>
-          <p className='user-properties'>userName</p>
-          <p className='user-properties'>Tweets</p>
-          <p className='user-properties'>Followers</p> 
-        </div>
-        <button className='btn' type='button'>Follow</button>
-      </div>
-    </div>
+    <CardList list={users } />
   );
 }
 
