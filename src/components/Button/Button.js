@@ -1,4 +1,7 @@
+import { CardBtn, BtnText } from "./Button.styled"
 
 export const Button = ({text}) => {
-    return <button className='btn' type='button'>{text}</button>
+    return <CardBtn type='button' variant="outlined">
+    <BtnText variant="button" display="block">{text}</BtnText>
+    </CardBtn>
 }

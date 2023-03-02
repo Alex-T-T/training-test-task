@@ -1,4 +1,4 @@
-// import logo from './images/logo/logo.svg';
+
 import userLogo from './images/logo/Hansel.png' 
 import './App.css';
 import { CardList } from './components/CardList/CardList';
