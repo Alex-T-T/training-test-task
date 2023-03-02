@@ -1,6 +1,5 @@
 
 import userLogo from './images/logo/Hansel.png' 
-import './App.css';
 import { CardList } from './components/CardList/CardList';
 
 const users = [
@@ -43,10 +42,9 @@ const users = [
 
 function App() {
 
-
-  return (
-    <CardList list={users } />
-  );
+    return (
+        <CardList list={users } />
+    );
 }
 
 export default App;

@@ -12,7 +12,6 @@ export const CardBtn = styled(Button)({
     '&:hover': {
         color: '#ffffff',
     }
-
 })
 
 export const BtnText = styled(Typography)({
