@@ -3,22 +3,40 @@ import logo from '../../images/logo/logo.svg';
 import { UserProperties, UserPropertiesList, UserCard, UserLogoBox, UserLogo, Logo } from "./Card.styled";
 import { CardActions, CardContent, CardMedia, Grid } from "@mui/material";
 import backgroundPicture from '../../images/background/picture2 1.png'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export const Card = ({ avatar, user, tweets, followers}) => {
-    const [count, setCount] = useState(followers)
+export const Card = ({ id, avatar, user, tweets, followers, onClick, followed}) => {
     const [isFollowing, setIsFollowing] = useState(false)
+    const [count, setCount] = useState(followers)
+
+useEffect(() => {
+    followed.includes(id) && setIsFollowing(true) 
+}, [ followed, id])
+
+useEffect(() => {
+    followed.includes(id) && setCount(followers + 1 )
+}, [followed, followers, id])
+
+useEffect(() => {
+    !followed.includes(id) && setCount(followers)
+}, [followed, followers, id])
+
+useEffect(() => {
+    !followed.includes(id) && setIsFollowing(false)
+}, [followed, id])
+
 
     const handleClick = () => {
         console.log('click')
-        if (!isFollowing) {
-            setCount(count + 1)
-            setIsFollowing(true)
-            return
-        }
-
-        setCount(count - 1)
-        setIsFollowing(false)
+        // if (!followed.includes(id)) {
+        //     // setCount(count + 1)
+        //     // setIsFollowing(true)
+        //     onClick(id)
+        //     return
+        // }
+        // setCount(count - 1)
+        // setIsFollowing(false)
+        onClick(id)
     }
 
     const localFollowers = count.toLocaleString('en-EN')
@@ -43,7 +61,7 @@ export const Card = ({ avatar, user, tweets, followers}) => {
 
                     <UserLogoBox>
                         <UserLogo
-                            sx={{ width: 55 }}
+                            sx={{ width: 75 }}
                             component="img"
                             alt="user logo"
                             image={avatar}

@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles';
 import { Button, Typography } from "@mui/material";
-import '@fontsource/montserrat/600.css';
+// import '@fontsource/montserrat/600.css';
 
 
 export const CardBtn = styled(Button)({

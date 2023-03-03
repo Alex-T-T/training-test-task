@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "user": "Elon Reeve Musk",
+        "tweets": 777,
+        "followers": 100500,
+        "avatar": "https://icons.iconarchive.com/icons/papirus-team/papirus-status/256/avatar-default-icon.png"
+    },
+    {
+        "id": 2,
+        "user": "Tim Cook",
+        "tweets": 888,
+        "followers": 1000000,
+        "avatar": "https://icons.iconarchive.com/icons/papirus-team/papirus-status/256/avatar-default-icon.png"
+    },
+    {
+        "id": 3,
+        "user": "SomeBody",
+        "tweets": 99,
+        "followers": 47,
+        "avatar": "https://icons.iconarchive.com/icons/papirus-team/papirus-status/256/avatar-default-icon.png"
+    },
+    {
+        "id": 4,
+        "user": "Boris Jonsonyk",
+        "tweets": 999,
+        "followers": 10100500,
+        "avatar": "https://icons.iconarchive.com/icons/papirus-team/papirus-status/256/avatar-default-icon.png"
+    },
+    {
+        "id": 5,
+        "user": "Good Girl",
+        "tweets": 100,
+        "followers": 100,
+        "avatar": "https://icons.iconarchive.com/icons/papirus-team/papirus-status/256/avatar-default-icon.png"
+    }
+]

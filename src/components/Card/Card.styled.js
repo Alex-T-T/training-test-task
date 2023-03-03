@@ -1,6 +1,5 @@
 import { styled } from '@mui/material/styles';
 import { Card, Box, Typography, CardMedia} from "@mui/material";
-import '@fontsource/montserrat/600.css';
 import background1 from '../../images/background/circle.svg';
 import background2 from '../../images/background/line.svg'
 
@@ -45,7 +44,8 @@ export const UserLogo = styled(CardMedia) ({
     position: 'absolute',
     top: '50%',
     left: '50%',
-    transform: "translate(-50%, -50%)",
+    transform: "translate(-50%, -56%)",
+    borderRadius: '50%',
 })
 
 export const UserProperties = styled(Typography) ({
