@@ -4,7 +4,7 @@ import { Button, Typography } from "@mui/material";
 
 
 export const CardBtn = styled(Button)({
-    width: '176px',
+    width: '196px',
     boxShadow: '0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25)',
     borderRadius: '10.3108px',
     color: '#373737',
