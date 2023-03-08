@@ -14,11 +14,13 @@ export const Card = ({ id, avatar, user, tweets, followers, onClick, followed}) 
         if (!followed.includes(id)) {
             setIsFollowing(false)
             setCount(followers)
+            return
         }
 
         setIsFollowing(true)
         setCount(followers + 1)
 }, [followed, followers, id])
+
 
 
     const handleClick = () => {
