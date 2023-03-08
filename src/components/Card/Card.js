@@ -9,33 +9,19 @@ export const Card = ({ id, avatar, user, tweets, followers, onClick, followed}) 
     const [isFollowing, setIsFollowing] = useState(false)
     const [count, setCount] = useState(followers)
 
-useEffect(() => {
-    followed.includes(id) && setIsFollowing(true) 
-}, [ followed, id])
+    useEffect(() => {
+    
+        if (!followed.includes(id)) {
+            setIsFollowing(false)
+            setCount(followers)
+        }
 
-useEffect(() => {
-    followed.includes(id) && setCount(followers + 1 )
+        setIsFollowing(true)
+        setCount(followers + 1)
 }, [followed, followers, id])
-
-useEffect(() => {
-    !followed.includes(id) && setCount(followers)
-}, [followed, followers, id])
-
-useEffect(() => {
-    !followed.includes(id) && setIsFollowing(false)
-}, [followed, id])
 
 
     const handleClick = () => {
-        console.log('click')
-        // if (!followed.includes(id)) {
-        //     // setCount(count + 1)
-        //     // setIsFollowing(true)
-        //     onClick(id)
-        //     return
-        // }
-        // setCount(count - 1)
-        // setIsFollowing(false)
         onClick(id)
     }
 
